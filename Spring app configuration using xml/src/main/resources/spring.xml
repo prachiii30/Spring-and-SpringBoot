@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="alien" class="org.Prachi.Alien" scope="prototype" autowire="byType">
+        <property name="age" value="33"></property>
+<!--        <property name="com" ref="lap"/>-->
+
+<!--        <constructor-arg value="33"/>-->
+<!--        <constructor-arg ref="lap"/>-->
+
+<!--        <constructor-arg index="1" ref="lap"/>-->
+<!--        <constructor-arg index="0" value="466"/>-->
+
+<!--        <constructor-arg name="lap" ref="lap"/>-->
+<!--        <constructor-arg name="age" value="221"/>-->
+
+
+       <property name="moon" value="234"></property> <!--  setter Intecteion-->
+        <!--   <property name="com" ref="deskt"></property> reference injection-->
+    </bean>
+
+
+<!--    <bean id="lap" class="org.Prachi.Laptop"></bean>-->
+    <bean id="deskt" class="org.Prachi.Desktop"/>
+</beans>
+
+
