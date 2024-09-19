@@ -14,7 +14,8 @@ public class SpringBootDemoApplication {
 
 //	programmer obj=new programmer();
 //	obj.code();//--manually creating the object
-//		//now i want spring to create the object
+
+//  now i want spring to create the object
 
 
 		programmer obj=c.getBean(programmer.class);

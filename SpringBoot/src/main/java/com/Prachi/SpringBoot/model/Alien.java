@@ -1,26 +1,16 @@
-package org.Prachi;
+package com.Prachi.SpringBoot.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
 
-    @Autowired   //field Injection
-    @Qualifier("desktop")
-    private Computer com;
+    @Value("23")
     private int age;
-
-
-    public Computer getCom() {
-        return com;
-    }
-
-    public void setCom(Computer com) {
-        this.com = com;
-    }
-
+    private Computer com;
 
     public int getAge() {
         return age;
@@ -30,10 +20,16 @@ public class Alien {
         this.age = age;
     }
 
+    public Computer getCom() {
+        return com;
+    }
+    @Qualifier("desktop")
+    @Autowired
+    public void setCom(Computer com) {
+        this.com = com;
+    }
     public void code(){
-        System.out.println("you are coding in Alien");
         com.compile();
-
     }
 
 
