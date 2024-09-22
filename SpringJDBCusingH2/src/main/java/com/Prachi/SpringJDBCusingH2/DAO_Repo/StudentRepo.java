@@ -3,8 +3,11 @@ package com.Prachi.SpringJDBCusingH2.DAO_Repo;
 import com.Prachi.SpringJDBCusingH2.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +34,10 @@ public class StudentRepo {
     }
 
     public List<Student> findAll() {
-        List<Student> students=new ArrayList<>();
-        return students;
+       String query="Select * from Student";
+
+
+
+       jdbc.query(query,);
     }
 }
