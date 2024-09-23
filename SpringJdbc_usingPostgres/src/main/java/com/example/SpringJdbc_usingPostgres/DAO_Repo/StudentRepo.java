@@ -1,6 +1,7 @@
-package com.Prachi.SpringJDBCusingH2.DAO_Repo;
+package com.example.SpringJdbc_usingPostgres.DAO_Repo;
 
-import com.Prachi.SpringJDBCusingH2.model.Student;
+
+import com.example.SpringJdbc_usingPostgres.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -11,11 +12,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 @Repository
 public class StudentRepo {
-
     private JdbcTemplate jdbc;
     public JdbcTemplate getJdbc() {
         return jdbc;
@@ -29,12 +27,12 @@ public class StudentRepo {
 
     public void save(Student s) {
         String query="Insert into Student values(?,?,?)";
-       int row= jdbc.update(query,s.getRoll(),s.getName(),s.getMarks());
+        int row= jdbc.update(query,s.getRoll(),s.getName(),s.getMarks());
         System.out.println(row+" Affected");//.update() method returns the int number of rows affected
     }
 
     public List<Student> findAll() {
-       String query="Select * from Student";
+        String query="Select * from Student";
 
 
         RowMapper<Student> rowmapper=new RowMapper<Student>() {
@@ -50,8 +48,9 @@ public class StudentRepo {
         };
 
 
-       return jdbc.query(query,rowmapper);//second is the object of rowmapper
+        return jdbc.query(query,rowmapper);//second is the object of rowmapper
         //in jdbc whenever  aquery is fired "RESULT SET " is obtained
         //rowmapper helps to get the data row by row from the result set
     }
 }
+
