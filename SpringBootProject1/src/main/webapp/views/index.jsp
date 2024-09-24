@@ -15,6 +15,13 @@
             <input type="text" id="num2" name="num2"><br>
             <input type="submit" value="submit">
         </form>
+           <form action="addAlien">
+                    <label for="aid"> Enter Id:</label>
+                    <input type="text" id="aid" name="aid"><br>
+                    <label for="aname"> Enter Name:</label>
+                    <input type="text" id="aname" name="aname"><br>
+                    <input type="submit" value="submit">
+                </form>
 
     </body>
 </html>
