@@ -15,8 +15,8 @@ const Search = () => {
 
     useEffect(() => {
         const fetchInitialPosts = async () => {
-            const response = await axios.get(`http://localhost:8082/posts`);
-            console.log(response);
+          const response = await axios.get(`http://localhost:8081/posts`);
+          console.log(response);
             setPost(response.data);
         }
          fetchInitialPosts();
