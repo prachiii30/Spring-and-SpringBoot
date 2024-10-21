@@ -52,5 +52,23 @@ public class StudentRepo {
         //in jdbc whenever  aquery is fired "RESULT SET " is obtained
         //rowmapper helps to get the data row by row from the result set
     }
+
+
+    //ORM - object relation model- library to which we give the class and in return
+    //it makes the table for us
+    //reducting the time wastage and better utilization of time and resources
+
+    //here we try to connec the relational world to the object world
+    //to map these object world to the relation world we need orm tool this orm tool can be imple,emted using
+    //hibernate , Top link
+
+    //it like we give the class and the varibles defined to the hibernate and say it to create the table
+    //hiberate knows how to do it
+    //therfor e for each objec the entire row is occupied
+    // now if we switch from hibernate to some other tool then we need to change the entire code
+    //cant we define some specificstion that is useful to any tool
+    //that specification which we do id known as JPA
+    //even if we have change the library from hibernatte to anything
+    //hibernate implements JPA
 }
 

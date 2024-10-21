@@ -17,12 +17,12 @@ public class jobControllerRest {
     @Autowired
     private JobService service ;
 
-    @RequestMapping("posts")
+    @GetMapping("posts")
     public List<JobPost> getAll(){
         return service.getAllJob();
 
     }
-    @RequestMapping("posts/{postId}")
+    @GetMapping("posts/{postId}")
     public JobPost getJob(@PathVariable int postId){
         return service.getJob(postId);
 
@@ -37,6 +37,7 @@ public class jobControllerRest {
     public void update(@RequestBody JobPost jb){
         service.update(jb);
     }
+
     @DeleteMapping("delpost/{postId}")
     public void delete(@PathVariable int postId){
         service.del(postId);
