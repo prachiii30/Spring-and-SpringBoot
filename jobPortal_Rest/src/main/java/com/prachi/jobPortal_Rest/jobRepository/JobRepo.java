@@ -33,4 +33,25 @@ public class JobRepo {
         }
        return  null;
     }
+
+    public void update(JobPost jb) {
+        for(JobPost job : list){
+            if(job.getPostId()==jb.getPostId()){
+                job.setPostDesc(jb.getPostDesc());
+                job.setPostProfile(jb.getPostProfile());
+                job.setReqExperience(jb.getReqExperience());
+                job.setPostTechStack(jb.getPostTechStack());
+                break;
+
+            }
+        }
+    }
+
+    public void del(int postId) {
+        for(JobPost job : list){
+            if(job.getPostId()==postId){
+                list.remove(job);
+            }
+        }
+    }
 }
