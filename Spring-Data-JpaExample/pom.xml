@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.prachi</groupId>
-	<artifactId>Spring-data-jpa-example</artifactId>
+	<artifactId>Spring-Data-JpaExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring-data-jpa-example</name>
+	<name>Spring-Data-JpaExample</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -38,7 +38,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+			<scope>42.7.4</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
