@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.Optional;
+
 @SpringBootApplication
 public class SpringDataJpaExampleApplication {
 
@@ -29,8 +31,34 @@ public class SpringDataJpaExampleApplication {
 		s3.setName("Utakrsh");
 		s3.setMarks(99);
 
-		repo.save(s1);
+		//to insert into the table
+//		repo.save(s1);
+//		repo.save(s2);
+//		repo.save(s3);
+
+		//to fetch all record
+//		System.out.println(repo.findAll());
+
+		//to fetch one record
+		System.out.println(repo.findById(101)) ;
+
+//		it migth be possible that it contains the null value so the better option is
+
+		Optional<Student> s=repo.findById(102);
+		System.out.println(s.orElse(new Student()));
+
+		System.out.println(repo.findByName("Prachi"));
+
+//		to update
+		s2.setRollNo(102);
+		s2.setName("Youvi");
+		s2.setMarks(59);
+
 		repo.save(s2);
+		repo.delete(s3 );
+
+
+
 
 
 
