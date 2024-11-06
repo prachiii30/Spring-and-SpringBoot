@@ -14,6 +14,6 @@ public interface StudentRepo extends JpaRepository<Student,Integer> {
     @Query("select s from Student s where s.Name=?1")
     List<Student> findByName(String name);
 
-    //jpql usese DSL Domain Specific Lnaguage using this it create certains methods behind the scene
-    // we can use those direct skippin @query
+    //jpql uses DSL Domain Specific Language using this it creates certain methods behind the scene
+    // we can use those direct skipping @query
 }
