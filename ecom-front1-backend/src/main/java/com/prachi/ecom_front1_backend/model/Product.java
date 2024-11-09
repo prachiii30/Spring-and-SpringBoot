@@ -1,12 +1,8 @@
 package com.prachi.ecom_front1_backend.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.ValueGenerationType;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -30,6 +26,15 @@ public class Product {
     private Date releaseDate;
     private boolean productAvailable;
     private int stockQuantity;
+
+//    Working with image
+    private String imageName;
+    private String imageType;
+//    @Lob  used for large object
+    @Lob
+    private  byte[] imageData;
+
+
 
 
 
