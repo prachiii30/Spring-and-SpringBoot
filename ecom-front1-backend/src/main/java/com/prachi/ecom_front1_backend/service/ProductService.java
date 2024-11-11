@@ -44,7 +44,7 @@ public class ProductService {
         productRepo.deleteById(id);
     }
 
-//    public List<Product> search(String keyword) {
-//        return productRepo.searchProduct(keyword);
-//    }
+    public List<Product> search(String keyword) {
+        return productRepo.searchProduct(keyword);
+    }
 }
