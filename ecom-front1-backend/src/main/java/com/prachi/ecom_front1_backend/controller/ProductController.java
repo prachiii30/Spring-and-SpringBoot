@@ -52,6 +52,13 @@ public class ProductController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PutMapping("/product/{id}")
+    public ResponseEntity<String> updateProduct(@RequestPart Product product,@RequestPart MultipartFile imageFile) throws IOException {
+        Product p=productService.updateImage(product,imageFile);
+        return  new ResponseEntity<>("Sucessfully updated",HttpStatus.OK);
+    }
+
     @GetMapping("product/{productId}/image")
     public ResponseEntity<byte[]> getImageByProductId(@PathVariable int productId){
         Product product =productService.getProductById(productId);
@@ -60,6 +67,19 @@ public class ProductController {
 
     }
 
+    @DeleteMapping("/product/{id}")
+    public String delProduct(@PathVariable int id){
+        productService.delProduct(id);
+        return "Successful deletion";
+    }
+
+//    @GetMapping("products/search")
+//    public ResponseEntity<List<Product>> searchProduct(@RequestParam String keyword){
+//        List<Product> list=productService.search(keyword);
+//        return new ResponseEntity<>(list,HttpStatus.OK);
+//
+//
+//    }
 
 
 
