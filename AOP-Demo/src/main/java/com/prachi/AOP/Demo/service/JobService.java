@@ -1,7 +1,4 @@
 package com.prachi.AOP.Demo.service;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,27 +20,18 @@ public class JobService {
 
 
     //method to return all JobPosts
-    public List<JobPost> getAllJobs() {
+    public List<JobPost> getAllJobs()  {
+//        int num =6/0;
         return repo.findAll();
 
 
     }
-
-
-
-
-
-
-
-
 
     // method to add a jobPost
     public void addJob(JobPost jobPost) {
         repo.save(jobPost);
 
     }
-
-
 
 
     //method to get job by id

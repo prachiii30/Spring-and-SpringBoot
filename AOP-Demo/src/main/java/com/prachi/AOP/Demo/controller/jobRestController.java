@@ -26,11 +26,11 @@ public class jobRestController {
 
 
     @GetMapping("jobPosts")
-    public List<JobPost> getAllJobs() {
+    public List<JobPost> getAllJobs()  {
         return service.getAllJobs();
 
     }
-    
+
     @GetMapping("/jobPost/{postId}")
     public JobPost getJob(@PathVariable int postId) {
         return service.getJob(postId);
