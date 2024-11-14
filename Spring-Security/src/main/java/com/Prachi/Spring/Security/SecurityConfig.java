@@ -26,6 +26,8 @@ public class SecurityConfig {
         //to  enable the loginform username and password
 //       http.formLogin(Customizer.withDefaults());  for stateles we not need form login
 
+
+        //for postman
         http.httpBasic(Customizer.withDefaults());
         http.sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return http.build();
