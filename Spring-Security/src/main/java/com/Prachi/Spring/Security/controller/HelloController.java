@@ -1,4 +1,4 @@
-package com.Prachi.Spring.Security;
+package com.Prachi.Spring.Security.controller;
 
 
 import jakarta.servlet.http.HttpServletRequest;

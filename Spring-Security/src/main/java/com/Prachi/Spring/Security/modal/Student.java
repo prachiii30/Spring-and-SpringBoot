@@ -1,7 +1,6 @@
-package com.Prachi.Spring.Security;
+package com.Prachi.Spring.Security.modal;
 
 
-import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
