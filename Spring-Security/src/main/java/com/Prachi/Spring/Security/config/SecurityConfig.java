@@ -25,7 +25,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests(request->request.anyRequest().authenticated());
 
         //to  enable the loginform username and password
-//       http.formLogin(Customizer.withDefaults());  for stateles we not need form login
+       http.formLogin(Customizer.withDefaults());  //for stateles we not need form login
 
 
         //for postman
